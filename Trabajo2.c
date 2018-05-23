@@ -29,17 +29,13 @@ void main()
    	m=m+3;
    	n=n-1;
    }
-   switch(m)
+   if(m>=4)
    {
-   	case(4):
-   	printf("Tus notas obtenidas en este cuatrimestre son:\n Informatica 9\n Calculo 8\n Fisica 8\n");
-   	break;
-   	case(3):
-   		printf("Informatica 6");
-   		break;
-   		default:
-   		break;
-   	 }
+   	imprime("Tus notas son buenas\n","BUNEASNOTAS.txt");
+   }
+   else if (m<=3)
+   imprime("mierdda de nota","notasmlas.txt");
+   
    
 }
 void imprime(char mensaje[], char nombre[])
