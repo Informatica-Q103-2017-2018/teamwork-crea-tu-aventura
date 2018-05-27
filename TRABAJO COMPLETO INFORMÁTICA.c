@@ -10,6 +10,7 @@ typedef struct{
 void main()
 {
 	int m=0,n=0,numero; // m y n representan la inteligencia y la reputacion, respectivamente
+	//Aquí utilizamos punteros junto con la estructura hecha al principio
 	perfil f,r,g,h,*p=&f,*w=&r,*y=&g,*t=&h;
 	char respuesta,c;
 	printf("Escribe tu nombre:\n");
@@ -24,8 +25,8 @@ void main()
 	printf("Apelldios:%s\n", f.apellido);
 	printf("Edad:%i\n", f.edad);
 	printf("Numero de matricula:%i\n", f.nummatricula);	
-	//Primer a�o Primer cuatrimestre
-	imprime("Estas en tu primer anno de carrera. Cursas ingenieria quimica en la Universidad Politecnica de Madrid\n ","Primera�oprimercuatri.txt");
+	//Primer año Primer cuatrimestre
+	imprime("Estas en tu primer anno de carrera. Cursas ingenieria quimica en la Universidad Politecnica de Madrid\n ","Primerañoprimercuatri.txt");
 	   printf("Hay una charla informativa, quieres ir?\n");
 	     c= dowhile(respuesta);
 	if(c=='s')
@@ -81,7 +82,7 @@ void main()
 	   printf("\n");
 	   printf("El resto del semestre transcurre de manera normal.\n");
 	}
-	//Primer a�o Segundo Cuatrimestre
+	//Primer año Segundo Cuatrimestre
    	 printf("Empezamos el segundo cuatri de tu primer anho.\n");
 	imprime("Te invitan a un evento academico despues de unos dias de empezar el segundo cuatri.\n Quieres empezar el cuatri siendo irresponable(n) o quieres ir a hacer algo con tu vida(s)?  \n", "SegundoCuatri.txt" );
 	c=dowhile(respuesta);
@@ -92,6 +93,7 @@ void main()
 			n=n+1;
 			if(m>=4)
 	        {
+		     //Aquí se ve como las deciosones que tomas influyen a la historia, no sucedería si no tuvieras la suficiente inteligencia(m)		
 		     imprime("Se te acerca el celebre y reconocido fisico Albino Arenas empieza a hablarte porque ha oido hablar de tus dotes intelectuales. Encima te llevas un autografo y apruebas un parcial sin importancia de fisica.\n", "Albino.txt");
 		     m=m+1;
 	        }
@@ -124,8 +126,8 @@ void main()
 		else
 			imprime("No toques las narices y escribe s si la respuesta es si y n si la respuesta es no.","Inteligente.txt");
 			}
-//Segundo a�o Primer Cuatrimestre
-	imprime("Llegaste a la universidad en tu segundo anho, has conocido a tres amigos durante el verano ahora son tu apoyo y amor.En tus manos esta si quieres seguir con ellos, irte con otros o estar solo.\n","segundoa�oinicio.txt");
+//Segundo año Primer Cuatrimestre
+	imprime("Llegaste a la universidad en tu segundo anho, has conocido a tres amigos durante el verano ahora son tu apoyo y amor.En tus manos esta si quieres seguir con ellos, irte con otros o estar solo.\n","segundoañoinicio.txt");
 	printf("Escribe el nombre de tu primer amigo\n");
 	scanf("%s",w->nombre);
 	printf("Escribe el nombre de tu segundo amigo\n");
@@ -151,7 +153,7 @@ void main()
    }
    else if (m<7)
    imprime("Suspendiste algunas, tu puedes campeon\n","notasmlas.txt");
-//Segundo a�o Segundo Cuatrimestre
+//Segundo año Segundo Cuatrimestre
    imprime("Empieza el segundo cuatrimesre \n", "Segundo cuatrimestre 2anno.txt");
 	imprime("Inesperadamente, te empieza a gustar uno de tus amigos \n", "Segundo cuatrimestre 2anno.txt");
 
@@ -169,8 +171,8 @@ void main()
 		n=n+1;
 	}
 	imprime("Tu segundo anno de carrera ha acabado\n", "Segundo cuatrimestre 2anno.txt");
-//Tercer a�o Primer Cuatrimestre
-   imprime("Empiezas tercero y conoces a un latin lover llamado Max es muy simpatico, quizas te ayude en algo.\n Ademas de eso resulta que no hay buen rollo con tu novia tu eres el que decide que pasara\n","tercera�oinicio.txt");
+//Tercer año Primer Cuatrimestre
+   imprime("Empiezas tercero y conoces a un latin lover llamado Max es muy simpatico, quizas te ayude en algo.\n Ademas de eso resulta que no hay buen rollo con tu novia tu eres el que decide que pasara\n","tercerañoinicio.txt");
 	printf("Quieres terminar con ella?\n");
 	c=dowhile(respuesta);
 	if(c=='s')
@@ -212,7 +214,7 @@ void main()
 	case('r'):
 	{
 		printf("Realmente todo era un suenho en el que estabas sumergido\n");
-		printf("Te despiertas del sue�o pero vuelves a sumegirte dentro de nuevo\n"); 
+		printf("Te despiertas del sueño pero vuelves a sumegirte dentro de nuevo\n"); 
 		printf("No te va del todo mal en la universidad  \n");
 		printf("Finalmente acabas la universidad pero acabas descubriendo que tienes cancer \n");
 		break;
@@ -232,6 +234,7 @@ void main()
 default: break;
 }
 }
+//Aqui hay algunas como la imprimir y al mismo tiempo almacenar en archivo .txt
 void imprime(char mensaje[], char nombre[])
 {
 	FILE *pf;
